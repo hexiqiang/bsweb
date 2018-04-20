@@ -1,0 +1,66 @@
+<div id="J_side_mask" class="l-side--mask" style="display: none;" onclick="removeClick()"></div>
+<div id="J_side" class="l-side jin-side side-nav_is-collapsed"><!-- 侧边栏logo区域 -->
+    <div class="jin-side_h"><!-- logo -->
+        <div class="jin-side_logo" style="margin-bottom: 10px"><a href="http://bscf888.com" title="多多教育为投资者而生">
+            <h2>bscf888.com</h2>
+            <h1>多多教育<span>为投资者而生</span></h1></a></div><!-- 世界时间 -->
+        <div id="J_universal" class="jin-universal">
+            <div id="showTime" class="jin-universal_item"></div>
+        </div>
+        <script language="javascript">
+            var t = null;
+            t = setTimeout(time, 1000);//¿ªÊ¼Ö´ÐÐ
+            function time() {
+                clearTimeout(t);//Çå³ý¶¨Ê±Æ÷
+                dt = new Date();
+                var month = dt.getMonth() + 1;
+                var strDate = dt.getDate();
+                if (month >= 1 && month <= 9) {
+                    month = "0" + month;
+                }
+                if (strDate >= 0 && strDate <= 9) {
+                    strDate = "0" + strDate;
+                }
+                var h = dt.getHours();
+                var m = dt.getMinutes();
+                var s = dt.getSeconds();
+                document.getElementById("showTime").innerHTML = '北京：' + ' ' + month + '月' + strDate + '日' + " " + h + ":" + m + ":" + s;
+                t = setTimeout(time, 1000); //Éè¶¨¶¨Ê±Æ÷£¬Ñ­»·Ö´ÐÐ
+            }
+        </script>
+    </div><!-- 侧边栏导航区域 -->
+    <ul class="jin-side_nav">
+        <li id="J_live_status" class="jin-side_nav-item is-stop-live current">
+            <a class="jin-side_nav-link" href="" target="_blank"><i
+                    class="jin-icon jin-icon_24tv"></i><span>暂无视频直播</span></a></li>
+        <li class="jin-side_nav-item current blue"><a href="javascript:;" class="jin-side_nav-link" id="J_login"><i
+                class="jin-icon jin-icon_user"></i><span id="J_ucenter_username">登录 | 注册</span></a>
+            <ul id="J_nav_sub" class="jin-side_nav-sub">
+                <li><i class="jin-icon jin-icon_ucenter"></i><a href="">用户中心</a></li>
+                <li><i class="jin-icon jin-icon_logout"></i><a href="">退出</a></li>
+            </ul>
+        </li>
+    </ul>
+    <ul id="J_menu" class="jin-side_nav">
+        <li class="jin-side_nav-item J_sideNavItem" data-type="news">
+            <a class="jin-side_nav-link" href=""><i class="jin-icon jin-icon_news"></i><span>财经资讯</span></a>
+        </li>
+        <li class="jin-side_nav-item J_sideNavItem" data-type="video">
+            <a class="jin-side_nav-link is-new" href=""><i class="jin-icon jin-icon_tradingHero"></i><span>国内资讯<i
+                    class="jin-icon jin-icon_new"></i></span></a>
+        </li>
+        <li class="jin-side_nav-item J_sideNavItem" data-type="video">
+            <a class="jin-side_nav-link is-new" href=""><i
+                    class="jin-icon jin-icon_datacenter"></i><span>国际资讯</span></a>
+        </li>
+        <li class="jin-side_nav-item J_sideNavItem" data-type="video">
+            <a class="jin-side_nav-link" href=""><i class="jin-icon jin-icon_video"></i><span>视频讲解</span></a></li>
+        <li class="jin-side_nav-item J_sideNavItem" data-type="rili">
+            <a class="jin-side_nav-link" href="./cjdate.html"><i
+                    class="jin-icon jin-icon_rili"></i><span>今日最新闻</span></a>
+        </li>
+        <li class="jin-side_nav-item J_sideNavItem" data-type="trade">
+            <a class="jin-side_nav-link" href=""><i class="jin-icon jin-icon_trade"></i><span>直播大厅</span></a>
+        </li>
+    </ul>
+</div>

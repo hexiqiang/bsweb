@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{block name='title'}  {/block}</title>
+    <meta name="description" content="网站描述"/>
+    <meta name="keywords" content="网站关键词"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1"/>
+    <link href="" rel="apple-touch-icon-precomposed">
+    <link href="" type="image/x-icon" rel="icon">
+    <link rel="stylesheet" type="text/css" href="__INDEX__/css/style-commons.css-20180331.css"/>
+    <link rel="stylesheet" type="text/css" href="__INDEX__/css/ucenterUI.css">
+    <link rel="stylesheet" type="text/css" href="__INDEX__/css/style-index.css-20180331.css"/>
+    <!-- 新 Bootstrap 核心 CSS 文件 -->
+    <link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="__INDEX__/css/newsindex.css">
+</head>
+<body>
+<div class="l-wrap">
+
+    {include file='common:header'/}
+    <div class="l-main">
+        <div class="l-main_wrap"><!-- 主要内容 -->
+            {block name="content"}{/block}
+            {include file='common:right'/}
+        </div>
+    </div>
+    {include file='common:left'/}
+    {include file='common:footer'/}
+</div>
+</body>
+<script type="text/javascript" src="__INDEX__/js/libs/jquery-1.11.1.min.js"></script>
+<script type="text/javascript" src="__INDEX__/js/libs/underscore-min.js"></script>
+<script src="__INDEX__/js/plugins/rsa.js"></script>
+<script src="__INDEX__/js/ucenterUI/main.js"></script>
+
+<script type="text/javascript" src="__INDEX__/js/plugins/socket.io.js-20180115"></script>
+<script type="text/javascript" src="__INDEX__/js/v1/chunk.js-20180130"></script>
+<script type="text/javascript" src="__INDEX__/js/v1/commons.js-20180403"></script>
+<script type="text/javascript" src="__INDEX__/js/v1/index.js-20180331"></script>
+<!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
+<script src="https://cdn.bootcss.com/jquery/2.1.1/jquery.min.js"></script>
+<!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+<script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+
+<script>
+
+    function navrClick() {
+        document.getElementById('body').style.overflow = 'hidden'
+        document.getElementById('J_showNav').classList.add('active')
+        document.getElementById('J_side_mask').style.display = 'block'
+        document.getElementById('J_side').classList.remove('side-nav_is-collapsed')
+        document.getElementById('J_side').classList.add('expanded')
+    }
+
+    function removeClick() {
+        alert(1111)
+        document.getElementById('body').style.overflow = 'auto'
+        document.getElementById('J_showNav').classList.remove('active')
+        document.getElementById('J_side_mask').style.display = 'none'
+        document.getElementById('J_side').classList.add('side-nav_is-collapsed')
+        document.getElementById('J_side').classList.remove('expanded')
+    }
+
+    $('.carousel').carousel()
+    $('.carousel-tu').carousel()
+</script>
+
+
+<script>
+    $('.dian-1').css({'background':'#ccc','border-bottom':'1px solid #5b96ef','color':'#fff'})
+    function navClick(){
+        $('.dian-1').click(function(){
+            $('.dian-1').css({'background':'#ccc','border-bottom':'1px solid #5b96ef','color':'#fff'})
+            $('.show-1').css('display','block')
+            $('.dian-2').css({'background':'#fff','border-bottom':'none','color':'#000'})
+            $('.show-2').css('display','none')
+            $('.dian-3').css({'background':'#fff','border-bottom':'none','color':'#000'})
+            $('.show-3').css('display','none')
+        })
+        $('.dian-2').click(function(){
+            $('.dian-2').css({'background':'#ccc','border-bottom':'1px solid #5b96ef','color':'#fff'})
+            $('.show-2').css('display','block')
+            $('.dian-1').css({'background':'#fff','border-bottom':'none','color':'#000'})
+            $('.show-1').css('display','none')
+            $('.dian-3').css({'background':'#fff','border-bottom':'none','color':'#000'})
+            $('.show-3').css('display','none')
+        })
+        $('.dian-3').click(function(){
+            $('.dian-3').css({'background':'#ccc','border-bottom':'1px solid #5b96ef','color':'#fff'})
+            $('.show-3').css('display','block')
+            $('.dian-2').css({'background':'#fff','border-bottom':'none','color':'#000'})
+            $('.show-2').css('display','none')
+            $('.dian-1').css({'background':'#fff','border-bottom':'none','color':'#000'})
+            $('.show-1').css('display','none')
+        })
+    }
+    navClick()
+</script>
+</html>
